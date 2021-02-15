@@ -37,3 +37,13 @@ jobs:
           ./node_modules/@angular/cli/bin/ng build --prod --build-optimizer --progress=false
           ./node_modules/@angular/cli/bin/ng test --watch=false
           ./node_modules/@angular/cli/bin/ng lint
+      - name: Security scan
+
+      - name: Deployment to AWS
+        run:
+          echo "$(ls -la)"
+          echo "$(ls -la dist)"
+          ssh ubuntu@ec2-3-22-120-211.us-east-2.compute.amazonaws.com rm -rf demo-tmp
+          scp -r dist/demo ubuntu@ec2-3-22-120-211.us-east-2.compute.amazonaws.com:demo-tmp
+          ssh ubuntu@ec2-3-22-120-211.us-east-2.compute.amazonaws.com sudo rm -rf /var/www/html/demo
+          ssh ubuntu@ec2-3-22-120-211.us-east-2.compute.amazonaws.com sudo mv demo-tmp /var/www/html/demo
