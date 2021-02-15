@@ -19,7 +19,7 @@ import { MaterialModule } from './material.module';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    MaterialModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent],

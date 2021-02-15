@@ -4,7 +4,7 @@
       "firstName": "John",
       "lastName": "Doe",
       "email": "johndoe@example.com",
-      "phone": "+123456789",
+      "phone": "1234567890",
       "company": "Example Inc.",
       "address": "No. 123, Blue Planet"
     },
@@ -12,7 +12,7 @@
       "firstName": "Jane",
       "lastName": "Doe",
       "email": "janedoe@example.com",
-      "phone": "+123456789",
+      "phone": "1234567890",
       "company": "Example Inc.",
       "address": "No. 456, Blue Planet"
     }
