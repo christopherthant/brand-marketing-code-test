@@ -1,0 +1,20 @@
+{
+  "contacts": [
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "johndoe@example.com",
+      "phone": "+123456789",
+      "company": "Example Inc.",
+      "address": "No. 123, Blue Planet"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "email": "janedoe@example.com",
+      "phone": "+123456789",
+      "company": "Example Inc.",
+      "address": "No. 456, Blue Planet"
+    }
+  ]
+}
