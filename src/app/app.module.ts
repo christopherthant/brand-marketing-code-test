@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -13,6 +14,7 @@ import { MaterialModule } from './material.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

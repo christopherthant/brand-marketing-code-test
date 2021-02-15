@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ContactCreateDialog } from '../contact-create-dialog/contact-create-dialog.component';
+import { ContactCreateDialogComponent } from '../contact-create-dialog/contact-create-dialog.component';
 import { Contact } from '../contact.model';
 import { ContactsService } from '../contacts.service';
 
@@ -8,10 +8,10 @@ import { ContactsService } from '../contacts.service';
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.css'],
 })
-export class ContactList implements OnInit {
+export class ContactListComponent implements OnInit {
   columns: string[] = [
-    'first_name',
-    'last_name',
+    'firstName',
+    'lastName',
     'email',
     'phone',
     'company',
@@ -29,13 +29,15 @@ export class ContactList implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(ContactCreateDialog, {
+    const dialogRef = this.dialog.open(ContactCreateDialogComponent, {
       width: '300px',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log(result);
-      this.contacts = this.contacts.concat(result);
+      if (result) {
+        console.log(result); // demo purpose
+        this.contacts = this.contacts.concat(result);
+      }
     });
   }
 }

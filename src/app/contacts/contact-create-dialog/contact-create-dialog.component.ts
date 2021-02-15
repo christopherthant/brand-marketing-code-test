@@ -8,18 +8,18 @@ import {
 import {
   MatDialog,
   MatDialogRef,
-  MAT_DIALOG_DATA,
+  MAT_DIALOG_DATA
 } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
-  selector: 'contact-create-dialog',
+  selector: 'app-contact-create-dialog',
   templateUrl: './contact-create-dialog.component.html',
   styleUrls: ['./contact-create-dialog.component.css'],
 })
-export class ContactCreateDialog implements OnInit {
+export class ContactCreateDialogComponent implements OnInit {
   contactForm: FormGroup;
   constructor(
-    private dialogRef: MatDialogRef<ContactCreateDialog>,
+    private dialogRef: MatDialogRef<ContactCreateDialogComponent>,
     private snackBar: MatSnackBar
   ) {}
 
@@ -44,8 +44,8 @@ export class ContactCreateDialog implements OnInit {
 
   private initForm() {
     this.contactForm = new FormGroup({
-      first_name: new FormControl('', Validators.required),
-      last_name: new FormControl('', Validators.required),
+      firstName: new FormControl('', Validators.required),
+      lastName: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', [Validators.required]),
       address: new FormControl('', Validators.required),

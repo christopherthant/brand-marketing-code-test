@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "coding-test-two": {
+    "brand-marketing-code-test": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/coding-test-two",
+            "outputPath": "dist/brand-marketing-code-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "coding-test-two:build"
+            "browserTarget": "brand-marketing-code-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "coding-test-two:build:production"
+              "browserTarget": "brand-marketing-code-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "coding-test-two:build"
+            "browserTarget": "brand-marketing-code-test:build"
           }
         },
         "test": {
@@ -95,15 +95,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },
@@ -111,16 +107,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "coding-test-two:serve"
+            "devServerTarget": "brand-marketing-code-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "coding-test-two:serve:production"
+              "devServerTarget": "brand-marketing-code-test:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "coding-test-two"
+  "defaultProject": "brand-marketing-code-test"
 }

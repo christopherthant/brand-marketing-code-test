@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material.module';
-import { ContactCreateDialog } from './contact-create-dialog/contact-create-dialog.component';
-import { ContactList } from './contact-list/contact-list.component';
+import { ContactCreateDialogComponent } from './contact-create-dialog/contact-create-dialog.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
 @NgModule({
-  declarations: [ContactList, ContactCreateDialog],
+  declarations: [ContactListComponent, ContactCreateDialogComponent],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    RouterModule.forChild([{ path: '', component: ContactList }]),
+    RouterModule.forChild([{ path: '', component: ContactListComponent }]),
   ],
 })
 export class ContactsModule {}

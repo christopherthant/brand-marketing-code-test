@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'coding-test-two';
+  title = 'Brand Marketing Code Test';
 }
