@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
+  it('should display contact header', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('brand-marketing-code-test app is running!');
+    expect(await page.getTitleText()).toEqual('Contacts');
   });
 
   afterEach(async () => {
